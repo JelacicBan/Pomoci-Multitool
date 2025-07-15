@@ -4,12 +4,12 @@ import os
 import shutil
 import time
 
-# Initialize colorama for cross-platform colored output
+
 colorama.init(autoreset=True)
 
 def display_banner():
     os.system('cls' if os.name == 'nt' else 'clear')
-    width = max(shutil.get_terminal_size().columns, 60)  # Ensure minimum width for small terminals
+    width = max(shutil.get_terminal_size().columns, 60)  
     red = Fore.RED + Style.BRIGHT
     white = Fore.WHITE + Style.BRIGHT
     dim = Fore.RED + Style.DIM
@@ -35,4 +35,4 @@ def display_banner():
 
     for line in banner:
         print(line.center(width))
-        time.sleep(0.03)  # Subtle delay for smooth display
+        time.sleep(0.03)  
